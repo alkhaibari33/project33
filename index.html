@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+    <div class="X">
+        <h1 class="text-center"> WELCOME TO THE DRINK DB</h1>
+      </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-6"> <select id="drinkList" class="form-control"> </select> <button
+          class="order btn btn-block btn-primary"> Click to view drink</button>
+        <div class="mt-5"> <img class="img-fluid"
+            src="https://www.thecocktaildb.com/images/media/drink/vuquyv1468876052.jpg"
+            alt="https://www.thecocktaildb.com/images/ingredients/ice.png"> </div>
+      </div>
+      <div class="col-6">
+        <!-- <a href="#" id="viewOrders">View Orders</a> <a href="#" id="addOrders">Add Orders</a> -->
+        <div class="createOrder">
+          <h3>Add Order</h3>
+          <div> <label for="fname">First Name</label> <input type="text" id="fname" name="firstname"
+              placeholder="Your name.." class="form-control"> <label for="lname">Last Name</label> <input type="text"
+              id="lname" name="lastname" placeholder="Your last name.." class="form-control"> <label for="drink">drink
+              Name</label> <input type="text" id="dname" name="dname" placeholder="drink name" class="form-control"
+              readonly> <label for="city">city</label> <select id="city" name="city" class="form-control">
+              <option value="Dammam">Dammam</option>
+              <option value="Jeedah">Jeedah</option>
+              <option value="KSA">KSA</option>
+            </select> <button class="btn btn-block btn-primary addOrder mt-4"> Create order </button> </div>
+        </div>
+        <div class="viewOrders">
+          <h3>View Order</h3>
+          <table class="orderList table"> </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCB2lJTxUB2A5V_c1JaCbbAH4FQGPOonqI",
+    authDomain: "the-cocktaildb.firebaseapp.com",
+    databaseURL: "https://the-cocktaildb.firebaseio.com",
+    projectId: "the-cocktaildb",
+    storageBucket: "the-cocktaildb.appspot.com",
+    messagingSenderId: "541505450576"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="app.js"></script>
+</body>
+
+</html>
